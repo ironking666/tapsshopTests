@@ -1,0 +1,14 @@
+{
+  "name": "tapsshoptests",
+  "version": "1.0.0",
+  "description": "Internet shop tests in cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krzysztof Waliszewski",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0"
+  }
+}

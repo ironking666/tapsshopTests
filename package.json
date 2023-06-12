@@ -6,9 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironking666/tapsshopTests.git"
+  },
   "author": "Krzysztof Waliszewski",
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.14.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
   }
 }

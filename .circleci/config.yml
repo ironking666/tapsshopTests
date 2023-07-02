@@ -5,10 +5,18 @@ workflows:
   build:
     jobs:
       - cypress/install
-      - cypress/run:
+      - cypress/cartTest:
           requires:
             - cypress/install
           store_artifacts: true
           parallel: true
-          parallelism: 3
-          group: 2 machines
+          parallelism: 1
+          group: "machine-1" # Grupa dla pierwszej maszyny
+      - cypress/loginTest:
+          requires:
+            - cypress/install
+          store_artifacts: true
+          parallel: true
+          parallelism: 1
+          group: "machine-2" # Grupa dla drugiej maszyny
+

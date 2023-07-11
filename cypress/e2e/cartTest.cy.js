@@ -21,4 +21,27 @@ describe("cart page tests", () => {
     cartPage.removeItemFromCart();
     cartPage.checkThatCartIsEmpty();
   });
+  it("should add two different products to cart", function () {
+    cy.wait(1000);
+    homePage.visitPage();
+    homePage.addSunglassesProductToCart();
+    homePage.clickGoToCartFromProductButton();
+    cartPage.checkThatAddedProductsAreInCart();
+  });
+  it("should change quantity in cart", function () {
+    homePage.clickGoToCartFromProductButton();
+    cartPage.changeQuantityInCart();
+    cartPage.checkNumberOfProductsInCart();
+  });
+  it("should check if user can fill coupon code input", function () {
+    homePage.clickGoToCartFromProductButton();
+    cartPage.enterCouponCodeValue();
+    cartPage.checkIfCouponCodeInputHasBeenFilled();
+  });
+  it("should check if the use of the coupon code is blocked", function () {
+    homePage.clickGoToCartFromProductButton();
+    cartPage.enterCouponCodeValue();
+    cartPage.clickApplyCouponCodeButton();
+    cartPage.checkVisibilityOfCouponCodeAlert();
+  });
 });

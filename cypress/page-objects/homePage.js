@@ -1,7 +1,6 @@
 import Urls from "./urls";
 
 const myAccountHeaderButton = "#menu-item-100";
-
 const dataBlockNameNew = 'div[data-block-name="woocommerce/product-new"]';
 const checkCartFromProductLevel = ".added_to_cart.wc-forward";
 
@@ -29,6 +28,13 @@ class HomePage {
     cy.get(dataBlockNameNew).within(() => {
       cy.fixture("products").then((data) => {
         cy.get(data.HoodieWithZipper.Locator).click();
+      });
+    });
+  }
+  addSunglassesProductToCart() {
+    cy.get(dataBlockNameNew).within(() => {
+      cy.fixture("products").then((data) => {
+        cy.get(data.Sunglasses.Locator).click();
       });
     });
   }

@@ -44,4 +44,8 @@ describe("cart page tests", () => {
     cartPage.clickApplyCouponCodeButton();
     cartPage.checkVisibilityOfCouponCodeAlert();
   });
+  it("should check if price in cart is correct", function () {
+    homePage.clickGoToCartFromProductButton();
+    cartPage.checkIfPriceInCartIsCorrect();
+  });
 });

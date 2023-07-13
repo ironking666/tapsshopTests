@@ -4,7 +4,7 @@
     "Name": "Hoodie with Zipper"
   },
   "Polo": {
-    "Locator": "a[data-product_id='53']",
+    "Locator": "a[href='https://tapsshop.pl/?product=polo']",
     "Name": "Polo"
   },
   "Sunglasses": {

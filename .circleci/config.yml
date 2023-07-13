@@ -9,14 +9,19 @@ workflows:
           requires:
             - cypress/install
           store_artifacts: true
-          spec: cypress/e2e/cartTest.cy.js
+          spec: cypress/e2e/cartPageTest.cy.js
       - cypress/run:
           requires:
             - cypress/install
           store_artifacts: true
-          spec: cypress/e2e/logInTest.cy.js
+          spec: cypress/e2e/logInPageTest.cy.js
       - cypress/run:
           requires:
             - cypress/install
           store_artifacts: true
           spec: cypress/e2e/orderPageTest.cy.js
+      - cypress/run:
+          requires:
+            - cypress/install
+          store_artifacts: true
+          spec: cypress/e2e/productPageTest.cy.js

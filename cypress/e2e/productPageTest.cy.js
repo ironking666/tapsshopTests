@@ -11,5 +11,6 @@ describe("product page tests", () => {
 
   it("should click on product and navigate to product view", function () {
     productPage.navigateToProductView();
+    productPage.checkIfAllProductInformationsAreVisibleOnProductPage();
   });
 });

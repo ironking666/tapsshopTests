@@ -10,7 +10,7 @@ const quantityInCart = ".input-text.qty";
 const updateCartButton = "button[name='update_cart']";
 const couponCodeInput = "input[name='coupon_code']";
 const applyCouponButton = "button[name='apply_coupon']";
-const priceFieldInCart = "bdi";
+const priceField = "bdi";
 
 class CartPage {
   checkThatAddedProductIsInCart() {
@@ -59,7 +59,7 @@ class CartPage {
   }
   checkIfPriceInCartIsCorrect() {
     cy.wait(1000);
-    cy.get(priceFieldInCart)
+    cy.get(priceField)
       .first()
       .should("have.text", PRICE_OF_PRODUCTS.hoodieWithZipperPrice);
   }

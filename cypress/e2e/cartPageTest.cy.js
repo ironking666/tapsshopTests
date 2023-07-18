@@ -21,7 +21,7 @@ describe("cart page tests", () => {
     cartPage.checkThatCartIsEmpty();
   });
   it("should add two different products to cart", function () {
-    cy.wait(1000);
+    cy.wait(1500);
     homePage.visitPage();
     homePage.addSunglassesProductToCart();
     homePage.clickGoToCartFromProductButton();

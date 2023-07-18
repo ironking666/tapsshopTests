@@ -1,6 +1,5 @@
 import HomePage from "../page-objects/homePage";
 import CartPage from "../page-objects/cartPage";
-import { faker } from "@faker-js/faker";
 import { beforeEach } from "mocha";
 
 describe("cart page tests", () => {

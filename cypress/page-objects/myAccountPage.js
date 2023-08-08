@@ -1,4 +1,5 @@
 import Urls from "./urls";
+import { ERROR_MESSAGE_VALUES } from "../support/values";
 const userInput = "#username";
 const passwordInput = "#password";
 const loginButton = 'button[name="login"]';
@@ -24,6 +25,18 @@ class AccountPage {
 
   checkVisibilityOfErrorAfterWrongLogin() {
     cy.get(errorAfterWrongLogin).should("be.visible");
+  }
+
+  checkIfAlertTextIsCorrectInCaseLoginWithIncorrectData() {
+    cy.get(errorAfterWrongLogin).contains(
+      ERROR_MESSAGE_VALUES.loginWithIncorrectData
+    );
+  }
+
+  checkIfAlertTextIsCorrectInCaseLoginWithoutData() {
+    cy.get(errorAfterWrongLogin).contains(
+      ERROR_MESSAGE_VALUES.loginWithoutData
+    );
   }
 
   visitPage() {

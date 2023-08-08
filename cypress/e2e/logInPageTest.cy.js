@@ -19,11 +19,18 @@ describe("login page tests", () => {
     accountPage.checkVisibilityOfMyAccountNavigation();
   });
 
-  it("should not login to the application", function () {
+  it("should not login to the application with fake data", function () {
     accountPage.visitPage();
     accountPage.fillUsernameField(faker.internet.email());
     accountPage.fillUserPasswordField(faker.internet.password());
     accountPage.clickLoginButton();
     accountPage.checkVisibilityOfErrorAfterWrongLogin();
+  });
+
+  it("should not login to the application without any data", function () {
+    accountPage.visitPage();
+    accountPage.clickLoginButton();
+    accountPage.checkVisibilityOfErrorAfterWrongLogin();
+    accountPage.checkIfAlertTextIsCorrectInCaseLoginWithoutData();
   });
 });

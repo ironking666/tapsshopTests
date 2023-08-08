@@ -33,4 +33,10 @@ describe("login page tests", () => {
     accountPage.checkVisibilityOfErrorAfterWrongLogin();
     accountPage.checkIfAlertTextIsCorrectInCaseLoginWithoutData();
   });
+
+  it("should check if the password recovery link works", function () {
+    accountPage.visitPage();
+    accountPage.clickPasswordRecoveryLink();
+    accountPage.checkPasswordRecoveryLinkURLValidation();
+  });
 });

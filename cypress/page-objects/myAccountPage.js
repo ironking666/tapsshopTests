@@ -5,7 +5,8 @@ const passwordInput = "#password";
 const loginButton = 'button[name="login"]';
 const myAccountNavigation = ".woocommerce-MyAccount-navigation";
 const errorAfterWrongLogin = 'ul[role="alert"]';
-
+const passwordRecoveryLink =
+  'a[href="https://tapsshop.pl/?page_id=9&lost-password"]';
 class AccountPage {
   fillUsernameField(email) {
     cy.get(userInput).type(email);
@@ -17,6 +18,12 @@ class AccountPage {
 
   clickLoginButton() {
     cy.get(loginButton).click();
+  }
+  clickPasswordRecoveryLink() {
+    cy.get(passwordRecoveryLink).click();
+  }
+  checkPasswordRecoveryLinkURLValidation() {
+    cy.url().should("eq", "https://tapsshop.pl/?page_id=9&lost-password");
   }
 
   checkVisibilityOfMyAccountNavigation() {

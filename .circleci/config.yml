@@ -25,3 +25,8 @@ workflows:
             - cypress/install
           store_artifacts: true
           spec: cypress/e2e/productPageTest.cy.js
+      - cypress/run:
+          requires:
+            - cypress/install
+          store_artifacts: true
+          spec: cypress/e2e/myAccountPageTest.cy.js

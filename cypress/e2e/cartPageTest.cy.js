@@ -2,6 +2,8 @@ import HomePage from "../page-objects/homePage";
 import CartPage from "../page-objects/cartPage";
 import { beforeEach } from "mocha";
 
+
+
 describe("cart page tests", () => {
   const homePage = new HomePage();
   const cartPage = new CartPage();

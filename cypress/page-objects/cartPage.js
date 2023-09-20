@@ -4,8 +4,7 @@ import { COUPON_CODES } from "../support/values";
 const productName = ".product-name";
 const removeItemButton = ".remove";
 const emptyCartInfo = ".cart-empty.woocommerce-info";
-const goToPaymentsButton =
-  ".checkout-button.button.alt.wc-forward.wp-element-button";
+const goToPaymentsButton = ".checkout-button"
 const quantityInCart = ".input-text.qty";
 const updateCartButton = "button[name='update_cart']";
 const couponCodeInput = "input[name='coupon_code']";

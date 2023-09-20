@@ -51,13 +51,13 @@ class AccountPage {
 
   checkIfAlertTextIsCorrectInCaseLoginWithIncorrectData() {
     cy.get(errorAfterWrongLogin).contains(
-      ERROR_MESSAGE_VALUES.loginWithIncorrectData
+      ERROR_MESSAGE_VALUES.loginWithIncorrectData,
     );
   }
 
   checkIfAlertTextIsCorrectInCaseLoginWithoutData() {
     cy.get(errorAfterWrongLogin).contains(
-      ERROR_MESSAGE_VALUES.loginWithoutData
+      ERROR_MESSAGE_VALUES.loginWithoutData,
     );
   }
   checkIfAllMyAccountSectionsAreVisible() {

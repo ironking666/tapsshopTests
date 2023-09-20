@@ -53,7 +53,7 @@ class CartPage {
   checkVisibilityOfCouponCodeAlert() {
     cy.on("window:alert", (text) => {
       expect(text).to.equal(
-        "Kupon + " + COUPON_CODES.firstCouponValue + " + nie istnieje"
+        "Kupon + " + COUPON_CODES.firstCouponValue + " + nie istnieje",
       );
     });
   }

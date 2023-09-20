@@ -3,11 +3,9 @@ import HomePage from "../page-objects/homePage";
 import { beforeEach } from "mocha";
 
 describe("my account page tests", () => {
-  const homePage = new HomePage();
+
   const accountPage = new AccountPage();
-  //before(function () {
-  //cy.fixture("users.json").as("userData");
-  //});
+  
   beforeEach(function () {
     cy.fixture("users.json").as("userData");
     accountPage.visitPage();
